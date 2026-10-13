@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-将 Human lymph nodes 的两张切片 RNA + ADT 合并为一个统一 .h5ad 文件。
+Combine RNA + ADT from two Human lymph node slices into a single unified .h5ad file.
 
-输入目录结构：
+Input directory structure:
 data/Human_lymph_nodes/
 ├── slice1/
 │   ├── s1_adata_rna.h5ad
@@ -11,24 +11,24 @@ data/Human_lymph_nodes/
     ├── s2_adata_rna.h5ad
     └── s2_adata_adt.h5ad
 
-输出统一格式：
+Output unified format:
 adata.X
-    RNA 表达矩阵，所有 slice1 + slice2 细胞纵向合并
+    RNA expression matrix; all slice1 + slice2 cells concatenated vertically
 
 adata.obsm["protein_expression"]
-    31 个 ADT 蛋白表达，DataFrame，保留蛋白名称
+    31 ADT protein expressions, DataFrame, preserving protein names
 
 adata.obsm["spatial"]
-    空间坐标。注意两张切片坐标各自属于独立坐标系，
-    不应把两张切片当作同一连续组织空间。
+    Spatial coordinates. Note that the coordinates of the two slices belong to separate coordinate systems,
+    and the two slices should not be treated as one continuous tissue space.
 
 adata.obs["slice_id"]
-    "slice1" 或 "slice2"
+    "slice1" or "slice2"
 
 adata.obs["split"]
-    默认 slice1="train"，slice2="test"
+    Default slice1="train", slice2="test"
 
-运行示例：
+Example run:
 python prepare_human_lymph_nodes_combined.py \
   --input_dir data/Human_lymph_nodes \
   --output_file data_processed/Human_lymph_nodes/Human_lymph_nodes_combined.h5ad
