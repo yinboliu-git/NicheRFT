@@ -1,0 +1,8 @@
+The Human Tonsil dataset is publicly available from 10x Genomics:
+\url{https://www.10xgenomics.com/datasets/gene-protein-expression-library-of-human-tonsil-cytassist-ffpe-2-standard}.
+The Human Breast Cancer dataset is publicly available from 10x Genomics:
+\url{https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast}.
+The Human Lymph Node dataset is available via Zenodo
+(\url{https://doi.org/10.5281/zenodo.10362607}).
+The MISAR-seq dataset is available via Zenodo
+(\url{https://doi.org/10.5281/zenodo.7480069}). 
