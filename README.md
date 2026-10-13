@@ -80,8 +80,8 @@ The 8-step flow (`NFE=8`) improves on the retrieval prior on every reported axis
 
 | method | PCC-P | MMD | CMD-P | RMSE |
 |---|---|---|---|---|
-| retrieval prior | 0.7107 | 0.0447 | 0.0979 | 1.9008 |
-| flow, NFE=8 (default) | 0.7241 | 0.0087 | 0.0566 | 1.6599 |
+| Retrieval prior | 0.7107 | 0.0447 | 0.0979 | 1.9008 |
+| Flow, NFE=8 | 0.7241 | 0.0087 | 0.0566 | 1.6599 |
 
 See [examples/README.md](examples/README.md) for the full walkthrough,
 including the optional source-calibration flag and the small-batch note for
