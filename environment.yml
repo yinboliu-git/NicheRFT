@@ -1,0 +1,22 @@
+# Create: conda env create -f environment.yml
+# Activate: conda activate nicherft
+# Direct dependencies are pinned; this is not a complete transitive lockfile.
+name: nicherft
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip=25.1
+  - pip:
+      - torch==2.5.1
+      - numpy==1.26.4
+      - scipy==1.15.3
+      - pandas==2.3.0
+      - anndata==0.11.4
+      - scanpy==1.11.1
+      - scikit-learn==1.7.0
+      - faiss-cpu==1.8.0
+      # Keep the AnnData storage stack on Zarr 2.
+      - zarr==2.18.7
+      # Required for the optional pytest-based model tests.
+      - pytest==8.3.5
